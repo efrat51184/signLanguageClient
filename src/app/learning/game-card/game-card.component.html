@@ -1,0 +1,14 @@
+<div class="card" (click)="cardClicked.emit()" [@cardFlip]="data.state">
+    <div  class="face back">
+        <img  src="\assets\back_card.jpg">
+
+ </div>
+    <div class="face front">        
+        <div *ngIf="data.imageId[1].length>2;else elseBlock">
+            <img style="height: 228px;width: 198px;" src='{{data.imageId[1]}}'>
+        </div>
+        <ng-template #elseBlock >
+            <h1  style="position: relative; left: 28%;top: 1%;font-size:1000%">{{data.imageId[1]}}</h1>     
+             </ng-template>
+    </div>
+</div>

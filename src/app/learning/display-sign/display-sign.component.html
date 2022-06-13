@@ -1,0 +1,25 @@
+<app-home (onChangeType)="changeType($event)"></app-home>
+
+<div style="display:inline-block; margin: 30px;" *ngFor="let sign of selectedSigns" class="col-sm-2">
+
+  <div class="card">
+    <button (click)="display(sign.signWord)" type="button" class="btn btn-primary" data-toggle="modal"
+      data-target="#exampleModalCenter">
+      <h4 style="font-size:200px"><strong>{{sign.nameWord}}</strong></h4>
+    </button>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="exampleModalCenter">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-body">
+      <button
+        style="position: fixed; margin-left: 95.5%; background-color: transparent;border-color: transparent;font-size: 100%;"
+        type="button" class="btn btn-secondary" data-dismiss="modal"></button>
+      <div> <img src="{{signToDisplay}}"></div>
+    </div>
+  </div>
+</div>
+

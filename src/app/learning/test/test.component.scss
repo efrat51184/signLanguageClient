@@ -1,0 +1,64 @@
+#button {
+    flex-grow: 1;
+    animation-name: grow;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes grow {
+    to {
+        transform: scale(1.2);
+    }
+}
+ /* Style the links inside the sidenav */
+#mySidenav a {
+    height: 95px;;
+    left: -80px;
+    position: absolute; /* Position them relative to the browser window */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 10px; /* 15px padding */
+    width: 140px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+  }
+  
+  #mySidenav a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+  }
+  
+  /* The about link: 20px from the top with a green background */
+  #correctAnswer {
+    // left: 0px; /* Position them outside of the screen */
+    top: 220px;
+    background-color: #04AA6D;
+  }
+  
+  #highestScore {
+    // ; /* Position them outside of the screen */
+    top: 313.57px;
+    background-color: #2196F3; /* Blue */
+  }
+//   המרחק בין כל אחד לשני
+//   93.57
+  #projects {
+    top: 407.14px;
+    background-color: #f44336; /* Red */
+  }
+  
+  #contact {
+    top: 500.71px;
+    background-color: #555 /* Light Black */
+    
+  }
+  
+
+//   position realetive:
+//  ודורס אלמנטים  אחרים האלמנט זז לפי הטופ והלפט ביחס למיקום המקורי שלו
+//   posiion absolue:
+//   ודורס אלמנטים  אחרים האלמנט זז לפי הטופ והלפט ביחס למסך הכללי שלו
+//   position fixed:
+//   ודורס אלמנטים  אחרים האלמנט זז לפי הטופ והלפט ביחס לחלון הדפדפן כך שאם נגולל את המסך האלמנט ישאר באותו מקום שלו
+

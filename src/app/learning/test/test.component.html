@@ -1,0 +1,91 @@
+<app-home (onChangeType)="changeArray($event)"></app-home>
+<img src="assets\logo.png" height="200">
+<img src="assets\textTest.png" height="100" style="margin-left: 20vw" ><br><br>
+<img src="assets\display.png" height="100" style="margin-right: 15vw;margin-left: 20vw;">
+<img src="assets\recognize.png" height="100" style="margin-right: 15vw;margin-left: 20vw;">
+<img src="assets\arrow.jpg" id="but" height="100" style="margin-right: 22vw;margin-left: 23vw;">
+<img src="assets\arrow.jpg" id="but" height="100" style="margin-right: 22vw;margin-left: 20vw;"><br><br>
+
+<img (click)="whichTest('Show')" src="assets\bottunCamera.png" height="100" width="100"  style="margin-right: 20vw;margin-left: 20vw;">
+<img (click)="whichTest('Identify')" src="assets\bottunEye.png" height="100" width="110"  style="margin-right: 20vw;margin-left: 20vw;">
+
+<!-- <button style="position:relative;top:20px;left:30%;" (click)="whichTest('Identify')" type="button"
+  class="btn btn-outline-info">Identify the letters</button>
+<button style="position:relative;top:20px;left:730px;" (click)="whichTest('Show')" type="button"
+  class="btn btn-outline-info">Show the letters</button> -->
+<div id="mySidenav" class="sidenav">
+
+  <a (click)="openCorrectAnswer()" (mouseover)="mouseEnter('div a') " (mouseout)="mouseLeave('div A')" id="correctAnswer">The Numbers Of Your Correct
+    Answers</a>
+  <!-- <div style="position: relative;top:155px ;" *ngIf="showLink==true">
+    <h1> You have not registered yet</h1>
+    <h1 style="color: blue;" (click)="navigate('register')"><u>To register</u> </h1>
+  </div>
+  <h1 style="position: relative;top:140px" *ngIf="showScore">{{mark}}</h1> -->
+
+  <a (click)="openScore()" id="highestScore">YourHighestScore</a>
+
+  <div id="theMark" style="position: relative;top:155px ;" *ngIf="showLink==true">
+    <h1> You have not registered yet</h1>
+    <h1 style="color: blue;" (click)="navigate('register')"><u>To register</u> </h1>
+  </div>
+  <h1 id="theMark" style="position: relative;top:140px" *ngIf="showScore">{{mark}}</h1>
+  <a id="projects">Projects</a>
+  <a id="contact">Contact</a>
+</div>
+
+
+
+<div *ngIf="typeOfTest=='Identify'">
+  <label style="font-size: 500%;margin-left: 20%;" for="">Lets Translate The Sign</label><br>
+  <div *ngFor="let sign of ExampleArray; let i=index">
+    <img style=" margin-left:20%" id="button" *ngIf="i==0 && begin" src="\assets\fxxrg.png" width="500" height="500"
+      (click)="(start())">
+
+    <div *ngIf="i==ind && i!=0">
+      <img style=" margin-left:20%" src={{ExampleArray[randNum-1].signWord}} width="200" height="450">
+      <form [formGroup]="testForm" style="position:absolute;top:50%;left:50% ;">
+        <input id="answer" formControlName="answer">
+      </form>
+      <!-- <label>{{randNum}}</label> -->
+      <button (click)="finish()" style=" background-color: rgb(90, 88, 88);position:absolute;top:70%;left:50% ;"
+        type="button" class="btn btn-outline-info">finish</button>
+
+      <img src="\assets\check-mark.png" *ngIf="isGood==true">
+      <label>You asked {{ind}} of 10 questions </label>
+      <!-- {{testForm.value.answer}} -->
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+ <!-- type of buttons: -->
+
+<!-- <button type="button" class="btn btn-outline-secondary me-2" placement="top" ngbTooltip="Tooltip on top">
+  Tooltip on top
+</button>
+<button class="btn btn-primary"  mat-raised-button
+        matTooltip="Info about the action"
+        aria-label="Button that displays a tooltip when focused or hovered over" matTooltipPosition="right">
+  Action
+</button>
+<br>
+<button mat-raised-button
+        matTooltip="Info about the action"
+        aria-label="Button that displays a tooltip when focused or hovered over">
+  Action
+</button> -->

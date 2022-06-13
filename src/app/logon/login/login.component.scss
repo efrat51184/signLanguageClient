@@ -1,0 +1,39 @@
+.form-signin{
+    width: 35vw;
+    height: 35vw;
+    border-radius: 15px;
+    margin: 7vw;
+    margin-left:33vw;
+    padding: 15px;
+    color: rgb(31, 161, 221);
+    background-color:rgb(255, 255, 255),
+   
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #60a3bc !important;
+}
+body{
+   align-self: center;
+   background-color:rgb(255, 255, 255);
+}
+h1{
+    font-weight: bold;
+
+}
+input{
+    margin: 13px;
+}
+button{
+    align-self: center;
+    background-color:  rgb(31, 161, 221);
+    border-color: rgb(31, 161, 221);
+    width: 50%;
+}
+button:hover{
+    background-color: rgb(31, 161, 221);
+    border-color: rgb(31, 161, 221);
+}

@@ -1,0 +1,85 @@
+<app-practice ></app-practice>
+    <div  style="position: relative; top: 140px;left:520px;" *ngFor="let t of selectedArray; let z=index" class="col-sm-2">
+        <!-- קריאה לפונקציית ההגרלה -->
+        beginRandNumber
+        {{beginRandNumber()}}
+        <div  *ngIf="z==ind2 ">
+        <h3 ><strong>{{t.textValue}}</strong></h3>
+         
+         <div  *ngFor="let s of t.textAnswer;let i=index">  
+        <input type="radio" id="one" name="selectNumber+{{z}}" >
+        <!-- אם זכתה התשובה הראשונה להיות התשובה הנכונה -->
+        <h1>{{nOne}}</h1>
+        <div   *ngIf="nOne==i">
+            <!-- הצגת סימני התשובה -->
+            <div style="display:inline-block; margin: 10px;" *ngFor="let k of t.textAnswer">
+                <h1>{{k}}</h1>
+            <img src={{selectedSign[k].signWord}} width="70" height="90">
+            </div>
+        </div>
+         <!-- אם לא זכתה התשובה הראשונה להיות התשובה הנכונה -->
+        <div *ngIf="nOne!=i">
+            <!-- הצגת סימני התשובה -->
+            <div style="display:inline-block; margin: 10px;" *ngFor="let k of t.textAnswer">
+                {{beginsRandAnswer()}}
+                {{this.selectedSign[this.randAnswer].signWord}}
+                <img src={{selectedSign[randAnswer].signWord}} width="70" height="90">
+            </div>
+        </div>
+        </div>
+        <button style="background-color:  rgb(90, 88, 88)  ;" (click)="finish(this.z)"  type="button" class="btn btn-outline-info">Finish</button>
+    
+        <br><br>
+        <img  *ngIf="ind==z && vx && f" src="\assets\check-mark.png" width="20" height="30">
+        <img  *ngIf="ind==z && vx && !f" src="\assets\close (1).png" width="20" height="30">
+    </div></div>
+
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+
+ <!-- <div *ngIf="type=='Letters'"> -->
+
+    <!-- <div style="display:inline-block" *ngFor="let t of letterArray;let z=index" class="col-sm-2"> -->
+        <!-- קריאה לפונקציית ההגרלה -->
+        <!-- {{beginsRandAnswer()}}
+          
+        <h3 ><strong>{{t.textValue}}</strong></h3> -->
+         <!-- אם זכתה התשובה הראשונה להיות התשובה הנכונה -->
+         <!-- <div *ngFor="let s of t.textAnswer;let i=index">
+            <div class="form-check">
+                <input style="background-color: rgb(62, 159, 216);" (click)="selected(i+1)"class="form-check-input" type="radio" name="flexRadioDefault+{{z}}" id="flexRadioDefault1">
+                <br>
+              </div> -->
+        <!-- <input (click)="selected(i+1)" type="radio" id="one" name="selectLetter+{{z}}"> -->
+        <!--  -->
+        <!-- <img  *ngIf="" src="\assets\check-mark.png" width="13" height="18">
+        <div   *ngIf="nOne==i+1"> -->
+            <!-- הצגת סימני התשובה -->
+            <!-- <div  style="display:inline-block; margin: 10px;" *ngFor="let s of t.textAnswer">
+              
+                     <img src={{signLetters[s].signWord}} width="50" height="50">
+            </div>
+        </div> -->
+         <!-- אם לא זכתה התשובה הראשונה להיות התשובה הנכונה -->
+        <!-- <div *ngIf="nOne!=i+1"> -->
+            <!-- הצגת סימני התשובה -->
+            <!-- <div  style="display:inline-block; margin: 10px;" *ngFor="let s of t.textAnswer;let i=index">
+              {{beginsRandAnswer()}} 
+              
+                <img src={{signLetters[randAnswer].signWord}} width="50" height="50">
+            </div>
+        </div>
+    </div>
+    <button style="background-color:  rgb(90, 88, 88)  ;" (click)="finish(this.z)"  type="button" class="btn btn-outline-info">Finish</button>
+    
+    <br><br>
+    <img  *ngIf="ind==z && vx && f" src="\assets\check-mark.png" width="20" height="30">
+    <img  *ngIf="ind==z && vx && !f" src="\assets\close (1).png" width="20" height="30">
+   </div>
+
+    </div>  -->

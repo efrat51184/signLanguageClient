@@ -1,0 +1,68 @@
+<body>
+  <br> <br>
+  <div>
+    <ul style="height: 160px;" class="row">
+
+      <li>
+        <div (click)="toHome()">
+          <br>
+          <img style=" margin-left:19%" src="/assets/home.png" width="65" height="65">
+          <br>
+          <a style="top:50%; margin-left: 15%;">Home</a>
+        </div>
+      </li>
+
+      <li id="about">
+        <div (click)="navigate('about')" style="margin-left: 90;" width="114.05" height="141">
+          <br>
+          <img style=" margin-left:17%" for="about" src="\assets\about (2).png" width="65" height="65">
+          <br>
+          <a style="margin-left: 15%;">About</a>
+        </div>
+      </li>
+
+      <li>
+        <div (click)="navigate('home')">
+          <br>
+          <img style="margin-left: 18%;" src="\assets\file.png" width="65" height="65">
+          <br>
+          <a>Instructions </a>
+        </div>
+      </li>
+
+      <li *ngFor="let type of types" class="dropdown" >
+        
+        <div>
+          <br>
+          <img style=" margin-left:17%" src={{type[1]}} width="65" height="65">
+          <br>
+          <a href="javascript:void(0)" style=" margin-left:13%" class="dropbtn">{{type[0]}}</a>
+        </div>
+        <ul style="position:absolute;top:100%" class="dropdown-content">
+          <a (click)="navigateWithType('practice',type[0])">practice</a>
+          <a (click)="navigateWithType('displaySign',type[0])">study</a>
+          <a (click)="navigateWithType('test',type[0])">test</a>
+        </ul>
+      </li>
+
+      <li class="dropdown" style="left: 62%;">
+        <img style="position: absolute;top:1%;" width="110" height="110" src="\assets\login.png"
+          href="javascript:void(0)" class="dropbtn">
+        <a (click)="navigate('about')"></a>
+        <a style="position:absolute;top:51%;right:5%;" href="javascript:void(0)" class="dropbtn">Personal Area</a>
+        <ul style="position:absolute;top:100%;" class="dropdown-content">
+          <a (click)="navigate('register')">Sign Up</a>
+          <a (click)="navigate('login')">Login</a>
+        </ul>
+      </li>
+      
+    </ul>
+
+  </div>
+
+
+  <div id='img'*ngIf="isHome==true">
+    <img  src="\assets\b.png">
+  </div>
+
+</body>
